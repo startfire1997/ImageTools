@@ -297,6 +297,11 @@ void CImageToolsDlg::TestFunc()
 			}
 			line += (width << 2);
 		}
+
+		delete yBuf;
+        delete uBuf;
+        delete vBuf;
+        delete uvBuf;
 	}
 
 	{
@@ -306,5 +311,6 @@ void CImageToolsDlg::TestFunc()
 	//
 	{
 		_close(newData.m_fd);
+		delete newData.m_bufData;
 	}
 }
